@@ -29,23 +29,28 @@ When maximized in Gnome:
 New window size: 1920x1114
 Resizing grid to 192x92
 
-[WINDOWEDX:192]
-[WINDOWEDY:92]
-[FONT:curses_800x600.png]
+[WINDOWEDX:80]
+[WINDOWEDY:42]
+[FONT:cga8x8plus1thick_double.png]
+cga8x8plus1thick_double.png
+cga8x8thick_double.png
+curses_small_double.bmp
+andux_cp866ish_double.png
+cga8x8thick_double.png
 
 You may disable window resizing if you wish.
 [RESIZABLE:YES]
 
 Full screen info.  The 0s below mean that the game will choose a resolution for you, but you can set it yourself as well.
 
-[FULLSCREENX:1290]
-[FULLSCREENY:1200]
+[FULLSCREENX:0]
+[FULLSCREENY:0]
 [FULLFONT:curses_800x600.png]
 
 If this is set to NO, tiles will be stretched to fit the screen if there is a resolution mismatch.
 If this is set to YES, the tiles will not be stretched, but rather the game view will be centralized, surrounded by black space.  Tiles that are too large will always be compressed rather than running off the screen.
 
-[BLACK_SPACE:YES]
+[BLACK_SPACE:NO]
 
 Graphics info, most of it as above.  Set GRAPHICS to YES to turn it all on.  This will use the "raw/graphics" folder for tile information.  Currently this is limited to whatever creature graphics you have downloaded.  The game comes with a few pictures to demonstrate.  As of February 2012, the Dwarf Fortress Wiki has custom tilesets available at http://dwarffortresswiki.org/index.php/Tileset_repository and creature graphics at http://dwarffortresswiki.org/index.php/Graphics_set_repository.
 
@@ -68,7 +73,7 @@ On a multi-core machine none of this is very likely to matter; stick to 2D.
 
 Linux/OS X users may also use PRINT_MODE:TEXT for primitive ncurses output.
 
-[PRINT_MODE:VBO]
+[PRINT_MODE:2D]
 	Mode examples:
 	 PRINT_MODE:2D
 	 PRINT_MODE:TEXT
@@ -78,7 +83,7 @@ Linux/OS X users may also use PRINT_MODE:TEXT for primitive ncurses output.
 
 Switches truetype on whenever the vertical tile size is this many pixels or larger.  You may also use YES/NO to force it on/off.  Turning it off may provide a minor speed boost (using font small enough that it doesn't activate won't).
 
-[TRUETYPE:24]
+[TRUETYPE:NO]
 
 Change this to YES to keep the DF window on top of your other windows.
 
@@ -100,7 +105,7 @@ Use this to set the maximum graphical frame refresh rate during play.
 
 On cards that support the OpenGL ARB_sync extension, turning this on can improve framerates in GPU overload conditions. It defaults to NO, as many cards that claim to support this will crash if asked to do so.
 
-[ARB_SYNC:NO]
+[ARB_SYNC:YES]
 
 This sets the applications vertical synchronization behavior.  Changing this to YES can impact your FPS if your G_FPS is high. ARB_SYNC is a better option, if your system supports it.
 
