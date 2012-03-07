@@ -30,8 +30,10 @@ New window size: 1920x1114
 Resizing grid to 192x92
 
 [WINDOWEDX:80]
+80
 [WINDOWEDY:42]
-[FONT:cga8x8plus1thick_double.png]
+42
+[FONT:cga8x8plus1thick_double_edit.png]
 cga8x8plus1thick_double.png
 cga8x8thick_double.png
 curses_small_double.bmp
@@ -39,7 +41,7 @@ andux_cp866ish_double.png
 cga8x8thick_double.png
 
 You may disable window resizing if you wish.
-[RESIZABLE:YES]
+[RESIZABLE:NO]
 
 Full screen info.  The 0s below mean that the game will choose a resolution for you, but you can set it yourself as well.
 
@@ -50,7 +52,7 @@ Full screen info.  The 0s below mean that the game will choose a resolution for 
 If this is set to NO, tiles will be stretched to fit the screen if there is a resolution mismatch.
 If this is set to YES, the tiles will not be stretched, but rather the game view will be centralized, surrounded by black space.  Tiles that are too large will always be compressed rather than running off the screen.
 
-[BLACK_SPACE:NO]
+[BLACK_SPACE:YES]
 
 Graphics info, most of it as above.  Set GRAPHICS to YES to turn it all on.  This will use the "raw/graphics" folder for tile information.  Currently this is limited to whatever creature graphics you have downloaded.  The game comes with a few pictures to demonstrate.  As of February 2012, the Dwarf Fortress Wiki has custom tilesets available at http://dwarffortresswiki.org/index.php/Tileset_repository and creature graphics at http://dwarffortresswiki.org/index.php/Graphics_set_repository.
 
@@ -97,11 +99,11 @@ Use this to set the maximum frame rate during play.  The movies are always cappe
 
 You may set FPS_CAP to 0 to make it uncapped.
 
-[FPS_CAP:100]
+[FPS_CAP:0]
 
 Use this to set the maximum graphical frame refresh rate during play.
 
-[G_FPS_CAP:50]
+[G_FPS_CAP:30]
 
 On cards that support the OpenGL ARB_sync extension, turning this on can improve framerates in GPU overload conditions. It defaults to NO, as many cards that claim to support this will crash if asked to do so.
 
@@ -148,7 +150,7 @@ If you set KEY_REPEAT_ACCEL_LIMIT above one, then after KEY_REPEAT_ACCEL_START r
 
 This controls the number of milliseconds between macro instructions.
 
-[MACRO_MS:15]
+[MACRO_MS:0]
 
 This controls the number of milliseconds that must pass before input works again after the view recenters on an event in dwarf mode.
 
